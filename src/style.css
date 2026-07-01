@@ -1,0 +1,80 @@
+:root {
+  --color-bg: #f5f5f5;
+  --color-primary: #497c6b;
+  --color-primary-hover: #3d6658;
+  --color-text-main: #1a1a1a;
+  --color-text-muted: #777;
+  --color-border: #e0e0e0;
+  --color-pill-bg: #e8f3f0;
+  --color-pill-text: #3d6658;
+  --nav-bg: #292929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Общие утилитарные классы */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.btn-primary:hover { background: var(--color-primary-hover); }
+
+.btn-outline {
+  background: white;
+  color: var(--color-text-main);
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+.btn-outline:hover { background: #f0f0f0; }
+
+/* Стили модальных окон */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
